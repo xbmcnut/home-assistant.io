@@ -36,7 +36,7 @@ light:
 Configuration variables:
 
 - **automatic_add** (*Optional*): To enable the automatic addition of lights on startup.
-- **devices** (*Required*): A list of devices with their ip address and a custom name to use in the frontend.
+- **devices** (*Optional*): A list of devices with their ip address and a custom name to use in the frontend.
 
 Example configuration:
 
