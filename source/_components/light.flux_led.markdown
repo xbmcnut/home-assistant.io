@@ -15,25 +15,49 @@ ha_release: 0.25
 
 Flux Led support is integrated into Home Assistant as a light platform. Several brands use the same protoco and they have the HF-LPB100 chipset in common.
 Example of bulbs:
--
-- []()
-- []()
-- []()
+- http://www.fluxsmartlighting.com/
+- [MagicLight® Plus - WiFi Smart LED Light Bulb4](https://www.amazon.com/gp/product/B00NOC93NG)
+- [Flux WiFi Smart LED Light Bulb4](http://smile.amazon.com/Flux-WiFi-Smart-Light-Bulb/dp/B01A6GHHTE)
+- [WIFI smart LED light Bulb1](http://smile.amazon.com/gp/product/B01CS1EZYK)
 
-Configuration
+Configuration:
 
 ```yaml
-# Example configuration.yaml entry
 light:
-  platform: hue
-  host: DEVICE_IP_ADDRESS
-  allow_unreachable: true
-  filename: my_hue_hub_token.conf
+ - platform: flux_led
+   automatic_add: BOOLEAN
+   devices:
+     IP_ADDR_1:
+       name: CUSTOM_NAME_1
+     IP_ADDR_2:
+       name: CUSTOM_NAME_2
 ```
 
 Configuration variables:
 
-- **host** (*Required*): IP address of the device, eg. 192.168.1.10.
-- **allow_unreachable** (*Optional*):  This will allow unreachable bulbs to report their state correctly. By default *name* from the device is used.
-- **filename** (*Optional*): Make this unique if specifying multiple Hue hubs.
+- **automatic_add** (*Optional*): To enable the automatic addition of lights on startup.
+- **devices** (*Required*): A list of devices with their ip address and a custom name to use in the frontend.
+
+Example configuration:
+
+Will automatically search and add all lights on start up:
+
+```yaml
+light:
+ - platform: flux_led
+   automatic_add: True
+```
+
+Will add two lights with given name:
+
+```yaml
+light:
+ - platform: flux_led
+   devices:
+     192.168.0.106:
+       name: flux_lamppost
+     192.168.0.109:
+       name: flux_living_room_lamp
+```
+
 
