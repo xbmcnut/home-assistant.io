@@ -15,7 +15,7 @@ The only requirement is that you have a Raspberry Pi with a fresh installation o
 *  Run the following command
 
 ```bash
-$ wget -Nnv https://raw.githubusercontent.com/home-assistant/fabric-home-assistant/master/hass_rpi_installer.sh && bash hass_rpi_installer.sh
+wget -Nnv https://raw.githubusercontent.com/home-assistant/fabric-home-assistant/master/hass_rpi_installer.sh && bash hass_rpi_installer.sh
 ```
 <p class='note warning'>
   Note this command is one-line and not run as sudo.
@@ -43,7 +43,7 @@ The All-In-One Installer script will do the following automatically:
 *  Setup a python virtualenv to run Home Assistant and components inside.
 *  Run as `hass` service account
 *  Install Home Assistant in a virtualenv
-*  Build and install Mosquitto v1.4.9 from source with websocket support running on ports 1883 and 9001
+*  Build and install Mosquitto v1.4.9 from source with websocket support running on ports 1883 and 9001 (default credentials pi:raspberry)
 *  Build and Install Python-openzwave in the Home Assistant virtualenv
 *  Build openzwave-control-panel in `/srv/hass/src/open-zwave-control-panel`
 *  Add both Home Assistant and Mosquitto to systemd services to start at boot
