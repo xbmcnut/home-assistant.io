@@ -44,6 +44,7 @@ Currently known supported models:
 - F6500
 - EH5600
 - F6400AF
+- LAC46C650
  
 If your model is not on the list then give it a test, if everything works correctly then add it to the list on [GitHub](https://github.com/home-assistant/home-assistant.io).
 The two letters at the beginning of the model number represent the region, UE is Europe, UN is North America and UA is Asia & Australia. The two numbers following that represent the screen size. If you add your model remember to remove these before adding them to the list.
