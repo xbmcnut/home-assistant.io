@@ -36,5 +36,5 @@ Configuration variables:
 - **port** (*Optional*): The port number. Defaults to 8080.
 - **name** (*Optional*): The name of the device used in the frontend.
 - **username** (*Optional*): The XBMC/Kodi HTTP username.
-- **password** (*Optional*): The XBMC/Kodi HTTP password.
+- **password** (*Optional*): The XBMC/Kodi HTTP password. You cannot leave the password field blank. Use 'None' if you do not use a password.
 - **turn_off_action** (*Optional*): The desired turn off action. Options are `none`, `quit`, `hibernate`, `suspend`, `reboot`, or `shutdown`. Default `none`.
