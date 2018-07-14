@@ -75,6 +75,8 @@ sensor:
           {% else %}
           n/a
           {% endif %}'{% endraw %}
+      icon_template: >
+          {%- if is_state('sensor.garage_status', 'closed') -%}mdi:garage{% else %}mdi:garage-open{%- endif -%} 
     garage_car_present:
       friendly_name: 'Honda in Garage'
       value_template: {% raw %}'{% if states.cover.honda %}
