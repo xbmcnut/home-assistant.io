@@ -37,4 +37,20 @@ resource:
   type: string
 {% endconfiguration %}
 
+Example Automation:
+
+```yaml
+  alias: Notify Home Assistant Start
+  hide_entity: true
+  trigger:
+    - platform: homeassistant
+      event: start
+  condition: []
+  action:
+    - service: notify.entity_id
+      data:
+        message: "Service Started"
+```
+N.B The current implementation does not support attaching files or file URL's using ```file_url:```
+
 To use notifications, please see the [getting started with automation page](/getting-started/automation/).
