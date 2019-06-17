@@ -58,3 +58,15 @@ recipient:
 {% endconfiguration %}
 
 To use notifications, please see the [getting started with automation page](/getting-started/automation/).
+```
+# Example automation notification entry
+automation:
+  - alias: The sun has set
+    trigger:
+      platform: sun
+      event: sunset
+    action:
+      service: notify.clickatell
+      data:
+        message: 'The sun has set'
+```
